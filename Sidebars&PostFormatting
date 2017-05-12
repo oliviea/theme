@@ -20,6 +20,7 @@
 <meta name="color:Borders" content="#eeeeee"/>
 <meta name="color:Blog Title" content="#ffffff"/>
  
+<meta name="select:Font Size" content="8px" title="8px"/>
 <meta name="select:Font Size" content="9px" title="9px"/>
 <meta name="select:Font Size" content="10px" title="10px"/>
 <meta name="select:Font Size" content="11px" title="11px"/>
@@ -40,6 +41,10 @@
 <meta name="select:Font" content="karla" title="Karla"/>
 <meta name="select:Font" content="roboto" title="Roboto"/>
 <meta name="select:Font" content="noto sans" title="Noto Sans"/>
+<meta name="select:Font" content="josefin sans" title="Josefin Sans"/>
+<meta name="select:Font" content="playfair display sc" title="Playfair Display SC"/>
+
+
  
 <meta name="select:Status" content="#67e146" title="On"/>
 <meta name="select:Status" content="#ff5353" title="Off"/>
@@ -62,3 +67,93 @@
  
 /*---------------------------*/
  
+body{background:{color:Background};color:{color:Text};font:{select:Font Size} '{select:Font}';font-smoothing: antialiased;margin: 0;-moz-osx-font-smoothing: grayscale;text-align: justify;-webkit-font-smoothing: antialiased}
+ 
+small, sub{font-size:{select:Font Size};vertical-align:baseline}
+ 
+img{border: none;height: auto;max-width: 100%}
+ 
+::selection{background: #fafafa}
+ 
+::-webkit-scrollbar-thumb{background:{color:Accent};min-height: 60px;width: 5px}
+::-webkit-scrollbar{background:{color:Background};height: 10px;width: 5px}
+div::-webkit-scrollbar-thumb{background:{color:Accent};min-height: 60px;width: 1px}
+div::-webkit-scrollbar{background:{color:Post Background};height: 10px;width: 1px}
+ 
+#s-m-t-tooltip{background:{color:Post Background};border: 1px solid{color:Borders};font-style: italic;margin: 10px 0 0 10px;padding: 3px 10px;text-transform: lowercase;z-index: 9999}
+ 
+a{border-bottom: 1px dotted{color:Accent};color:{color:Links};text-decoration: none;transition: linear all .3s}
+a:hover{color:{color:Accent}}
+ 
+.statum{margin: 200px auto;width: 350px}
+.introitus{width: 100%}
+.articulus{margin-bottom:{select:Post Spacing};width:{select:Post Size}}
+.modus{background:{color:Post Background};border: 1px solid {color:Borders};padding:{select:Post Padding};margin-bottom:10px}
+ 
+.caput{background-image: url({image:Header});background-position: center top;background-repeat: no-repeat;background-size: cover;border-bottom: 10px solid {color:Background};left: 0;min-height: 140px;position: fixed;top: 0;width: 100%;z-index: 99}
+ 
+/*---------------------------*/
+
+ul, ol{counter-reset: li 0;list-style: none;padding-left: 10px}
+ul li, ol li{list-style:none;margin: 5px 0}
+ul li:before, ol li:before{color:{color:Accent};font-weight: 900;margin-right: 8px;vertical-align: middle}
+ul li:before{content: '~';font-size:15px}
+ol li:before{content: counter(li);counter-increment: li}
+ 
+/*---------------------------*/
+ 
+blockquote{border-left: 2px solid {color:Borders};margin: 0;padding-left: 10px}
+ 
+.depictio{background:{color:Post Background};border: 1px solid {color:Borders};margin-top: 10px;padding: 0 20px}
+ 
+.nomen{color:{color:Links};font-family: cambria;font-size: 20px;line-height: 25px;padding: 0 20px 10px 50px;text-transform: capitalize}
+.nomen:before{background:{color:Accent};content: '';height: 2px;margin-left: -40px;margin-top: 14px;position: absolute;width: 30px}
+ 
+/*---------------------------*/
+ 
+.laudo{font: 15px 'lora';font-style: italic;line-height: 18px}
+.laudo-principium{font-family: 'calibri';font-style: italic;text-align: right;text-transform: lowercase}
+ 
+/*---------------------------*/
+ 
+.sermocino, .sermocino ol, .sermocino ul{list-style: none;margin: 0 0 0 -5px}
+.sermocino li:before{content: '' !important;margin: 0}
+.sermocino li{background:{color:Post Background};border: 1px solid{color:Borders};padding: 10px}
+.sermocino-hominem{font: calc({select:Font Size} + 1px) 'calibri';font-weight: 900}
+ 
+/*---------------------------*/
+ 
+.interrogo{background:{color:Post Background};border: 1px solid {color:Borders};color: #666;font-style: italic;letter-spacing: .5px;padding:{select:Post Padding};margin: 10px 0}
+.interrogo-petitori{line-height: 25px;background:{color:Post Background};border: 1px solid {color:Borders};padding:{select:Post Padding}}
+.interrogo-petitori img{border-radius: 50%;float: left;margin: 0 7px 0 0;width: 25px}
+.interrogo-responsum{background:{color:Post Background};border: 1px solid{color:Borders};margin: 10px 0;padding: 0 {select:Post Padding}}
+ 
+/*---------------------------*/
+ 
+.musica{display: inline-block;margin: 20px;position: relative}
+.musica-artem{border-radius: 50%;position: absolute;width: 79px}
+.musica-artem img{border-radius: 50%;height: auto;width: 100%}
+.musica-ludius{left: -7px;position: absolute;top: -18px}
+.musica-indicium{display: inline-block;line-height: 20px;margin-left: 90px;min-height: 85px;width: 100%}
+.musica-involvent-1{background:{color:Post Background};border-radius: 50%;height: 20px;left: 20px;-moz-transition: opacity .7s ease-in-out;opacity: .4;padding: 10px;position: absolute;top: 20px;transition: opacity .7s ease-in-out;-webkit-transition: opacity .7s ease-in-out;width: 20px}
+.musica-involvent-1:hover{opacity: 1}
+.musica-involvent-2{height: 19px;overflow: hidden;position: relative;width: 19px}
+.tumblr_audio_player{height: 90px;margin: 1px !important;-moz-transform: scale(0.60,0.60);-moz-transform-origin: top left;-ms-transform: scale(0.60,0.60);-ms-transform-origin: top left;-o-transform: scale(0.60,0.60);-o-transform-origin: top left;transform: scale(0.60,0.60);transform-origin: top left;width: 270px}
+ 
+/*---------------------------*/
+ 
+.proelio{background:{color:Post Background};border: 1px solid {color:Borders};height: 350px;overflow: auto}
+.proelio a{border: 0}
+.proelio img{display: none}
+ol.notes li{list-style: none;padding: 4px}
+ol.notes li img{list-style: none;margin-bottom: -10px;margin-right: 3px}
+.proelio ol, .proelio ul{margin: 0;padding-left: 20px}
+.retags{display: none}
+li.like:before, li.reblog:before, li.reply:before, li.original_post:before{font:{select:Font Size} 'solicons' !important;font-weight: 900;left: -10px;margin-right: 0;position: relative;vertical-align: middle}
+li.like:before{color: red;content: '\e0ec'}
+li.reblog:before{color: #58aeef;content: '\e17b'}
+li.original_post:before{color: #58aeef;content: '\e10e'}
+li.reply:before{color: #58aeef;content: '\3e'}
+ 
+/*---------------------------*/
+
