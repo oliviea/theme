@@ -1,0 +1,64 @@
+<!--
+ 
+//sigh
+ 
+-->
+ 
+<meta name="image:Sidebar 1" content="/"/>
+<meta name="image:Sidebar 2" content="/"/>
+
+<meta name="image:Header" content="/"/>
+ 
+<meta name="if:Sidebar Label" content=""/>
+<meta name="if:Align Navigation" content=""/>
+ 
+<meta name="color:Background" content="#f6f6f6"/>
+<meta name="color:Text" content="#aaaaaa"/>
+<meta name="color:Accent" content="#cfe8fc"/>
+<meta name="color:Links" content="#333333"/>
+<meta name="color:Post Background" content="#ffffff"/>
+<meta name="color:Borders" content="#eeeeee"/>
+<meta name="color:Blog Title" content="#ffffff"/>
+ 
+<meta name="select:Font Size" content="9px" title="9px"/>
+<meta name="select:Font Size" content="10px" title="10px"/>
+<meta name="select:Font Size" content="11px" title="11px"/>
+<meta name="select:Post Size" content="500px" title="500px"/>
+<meta name="select:Post Size" content="400px" title="400px"/>
+<meta name="select:Post Size" content="300px" title="300px"/>
+ 
+<meta name="select:Post Spacing" content="100px" title="100px"/>
+<meta name="select:Post Spacing" content="80px" title="80px"/>
+<meta name="select:Post Spacing" content="50px" title="50px"/>
+ 
+<meta name="select:Post Padding" content="5px" title="5px"/>
+<meta name="select:Post Padding" content="10px" title="10px"/>
+<meta name="select:Post Padding" content="20px" title="20px"/>
+ 
+<meta name="select:Font" content="open sans" title="Open Sans"/>
+<meta name="select:Font" content="fira sans" title="Fira Sans"/>
+<meta name="select:Font" content="karla" title="Karla"/>
+<meta name="select:Font" content="roboto" title="Roboto"/>
+<meta name="select:Font" content="noto sans" title="Noto Sans"/>
+ 
+<meta name="select:Status" content="#67e146" title="On"/>
+<meta name="select:Status" content="#ff5353" title="Off"/>
+ 
+<meta name="text:Link 1 URL" content=""/>
+<meta name="text:Link 1 Title" content="link 1"/>
+<meta name="text:Link 2 URL" content=""/>
+<meta name="text:Link 2 Title" content="link 2"/>
+<meta name="text:Link 3 URL" content=""/>
+<meta name="text:Link 3 Title" content="link 3"/>
+<meta name="text:Link 4 URL" content=""/>
+<meta name="text:Link 4 Title" content="link 4"/>
+ 
+<meta name="if:No Header" content=""/>
+ 
+<style type="text/css">
+ 
+.iframe-controls--desktop{right:10px !important; top:150px !important;}
+.accredo{bottom: 10px; right:10px;}
+ 
+/*---------------------------*/
+ 
