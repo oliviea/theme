@@ -157,3 +157,143 @@ li.reply:before{color: #58aeef;content: '\3e'}
  
 /*---------------------------*/
 
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- B START -->
+<blog class="introitus">
+{block:Posts}    
+<article class="articulus fade second">
+ 
+<!-- Type Text -->
+{block:Text}
+{block:Title}<div class="nomen">{Title}</div>{/block:Title}
+<div class="modus">{Body}</div>
+{/block:Text}
+ 
+<!-- Type Quote -->
+{block:Quote}
+<div class="modus">
+<div class="laudo">"{Quote}"</div><br>
+<div class="laudo-principium">{Source}</div>
+</div>
+{/block:Quote}
+ 
+<!-- Type Chat -->
+{block:Chat}
+{block:Title}<a href="{Permalink}"><div class="nomen">{Title}</div></a>{/block:Title}
+<div class="sermocino">
+<ul>{block:Lines}
+<li>{block:Label}<span class="sermocino-hominem">{Label}</span>{/block:Label} {Line}</li>
+{/block:Lines}</ul>
+</div>
+{/block:Chat}
+ 
+<!-- Video Fill -->
+{block:Video}
+<div class="video">{Video-500}</div>
+{/block:Video}
+ 
+<!-- Photo Fill -->
+{block:Photo}
+<div class="modus"><img src="{PhotoURL-500}"/></div>
+{/block:Photo}
+ 
+<!-- Photoset Fill -->
+{block:Photoset}
+<div class="photo-slideshow" id="photoset_{PostID}" data-layout="{PhotosetLayout}">
+{block:Photos}<div class="photo-data">
+<div class="pxu-photo">
+<a class="tumblr-box" rel="post-{PostID}" href="{PhotoURL-HighRes}"><img alt="{PhotoAlt}" src="{PhotoURL-500}" width="{PhotoWidth-500}" height="{PhotoHeight-500}" data-highres="{PhotoURL-HighRes}" data-width="{PhotoWidth-HighRes}" data-height="{PhotoHeight-HighRes}" class="{block:Exif}exif-yes {/block:Exif}{block:Caption}caption-yes{/block:Caption}" {block:Exif}data-camera="{block:Camera}{Camera}{/block:Camera}" data-iso="{block:ISO}{ISO}{/block:ISO}" data-aperture="{block:Aperture}{Aperture}{/block:Aperture}" data-exposure="{block:Exposure}{Exposure}{/block:Exposure}" data-focal="{block:FocalLength}{FocalLength}{/block:FocalLength}"{/block:Exif} {block:Caption}data-caption="{Caption}"{/block:Caption}></a>
+</div>
+</div>{/block:Photos}
+</div>
+{/block:Photoset}
+ 
+<!-- Link Fill -->
+{block:Link}
+<div class="nomen"><a href="{URL}">{Name}</a></div>
+{block:Description}<div class="modus">{Description}</div>{/block:Description}
+{/block:Link}
+ 
+<!-- Audio Fill -->
+{block:AudioPlayer}
+<div class="modus">
+<div class="musica">
+{block:AlbumArt}
+<div class="musica-artem"><img src="{AlbumArtURL}"></div>
+{/block:AlbumArt}
+<div class="musica-involvent-1">
+<div class="musica-involvent-2">
+<div class="musica-ludius">
+{AudioPlayerWhite}
+</div>
+</div>
+ 
+</div>
+<div class="musica-indicium">
+{block:TrackName}{TrackName}{/block:TrackName}<br/>
+{block:Artist}Artist: {Artist}{/block:Artist}<br/>
+{block:Album}Album: {Album}{/block:Album}<br/>
+{PlayCountWithLabel}
+</div>
+</div>
+</div>
+{/block:AudioPlayer}
+ 
+<!-- Question Fill -->
+{block:Answer}
+<div class="interrogo-involvent">
+<div class="interrogo-petitori"><img src="{AskerPortraitURL-128}"/> {Asker} said:</div>
+<div class="interrogo">{Question}</div>
+<div class="interrogo-responsum">{Answer}</div>
+</div>
+{/block:Answer}
+ 
+<!-- Caption Fill -->
+{block:Caption}
+<div class="depictio">{Caption}</div>
+{/block:Caption}
+ 
+<!-- Footer -->
+{block:Date}
+<div class="inum">
+<div class="origo">
+<a href="{ReblogURL}" title="reblog"><span class="sol-refresh-page-arrow"></span></a>
+<div class="cor">{LikeButton}<span class="cor-involvent-2"><span class="sol-lovers-heart" title="like"></span></span></div>
+</div>
+<a href="{Permalink}">{NoteCountWithLabel}</a>&nbsp;&nbsp;&nbsp;—&nbsp;&nbsp;&nbsp;
+posted <a href="{Permalink}">{TimeAgo}</a>
+<div class="ex">
+{block:RebloggedFrom}<a href="{ReblogParentURL}" title="{ReblogParentName}"><img src="{ReblogParentPortraitURL-128}"/></a>{/block:RebloggedFrom}
+{block:NotReblog}<img src="{PortraitURL-128}"/>{/block:NotReblog}
+</div>
+</div>
+{block:HasTags}
+<div class="nota">
+{block:Tags}
+<a href="{TagURL}">{Tag}</a>
+{/block:Tags}
+</div>
+{/block:HasTags}
+{/block:Date}
+
+<!-- Post's Notes -->
+{block:PostNotes}
+<div class="proelio">{PostNotes}</div>
+{/block:PostNotes}
+ 
+</article>
+{/block:Posts}
+<!-- {block:ContentSource}{SourceURL}{/block:ContentSource}{block:RebloggedFrom}{ReblogRootURL}{ReblogParentURL}{/block:RebloggedFrom} -->
+</blog>
+<!-- B END -->
